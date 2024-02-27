@@ -35,6 +35,8 @@ To use this function to count words, you'll need to implement your own `map_f` a
 3. If the above are correct, then you should now be able to test it the full solution `test_word_count`
 
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
+The work for this function would be O(n)
+The span for this function would be O(log_2(n))
 
 **Enter answer here**
 
@@ -53,6 +55,8 @@ for doc in docs:
 What is the problem that prevents us from easily parallelizing this solution?
 
 **Enter answer here**
+Race conditions would be a huge problem because two parralel calls would constantly be updating the same variable leading to a race condition.
+And combining the results would also be extremely inneficient so parrellizing would not be good. 
 
 
 ## Part 2: Sentiment analysis
